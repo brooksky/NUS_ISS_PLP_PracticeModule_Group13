@@ -29,15 +29,6 @@ def train_similarity_model(video_id, transcript_df):
     transcript_df['timestamp'] = transcript_df['duration'].cumsum()
     transcript_df['ten_sec_group'] = transcript_df['timestamp'].div(10).astype(int)
 
-    # chunk_of_speeches = {}
-    # for i in range((transcript_df['ten_sec_group'].max())):
-    #     section = transcript_df[transcript_df['ten_sec_group'].isin([i, i + 1])]
-    #     speech = section['text'].add(' ').sum()
-    #     chunk_of_speeches[i] = speech
-    #
-    # transcript_group_df = pd.DataFrame.from_dict(chunk_of_speeches, orient='index')
-    # transcript_group_df = transcript_group_df.reset_index().rename(columns={'index': 'group', 0: 'text'})
-
     # Group transcripts by ten second windows
     chunk_of_speeches = [{
             'group': group,
