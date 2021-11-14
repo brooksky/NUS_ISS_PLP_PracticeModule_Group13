@@ -39,9 +39,10 @@ def train_similarity_model(video_id, transcript_df):
     # transcript_group_df = transcript_group_df.reset_index().rename(columns={'index': 'group', 0: 'text'})
 
     # Group transcripts by ten second windows
-    chunk_of_speeches = [
-        {'group': group, 'text': ' '.join(transcript_df[(transcript_df['ten_sec_group'] == group)]['text'].tolist())}
-        for group in list(transcript_df['ten_sec_group'].unique())
+    chunk_of_speeches = [{
+            'group': group,
+            'text': ' '.join(transcript_df[(transcript_df['ten_sec_group'].isin([group, group+1]))]['text'].tolist())
+        } for group in list(transcript_df['ten_sec_group'].unique())
     ]
 
     transcript_group_df = pd.DataFrame(chunk_of_speeches)
