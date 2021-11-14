@@ -7,7 +7,7 @@ This is a project to predict video timestamp and sentiment value for YouTube com
 - Google Cloud Api Token for YouTube Data API v3
 
 ### Steps:
-1. Download zip from https://github.com/brooksky/NUS_ISS_PLP_PracticeModule_Group13 and unzip it.
+1. Download zip from [GitHub: NUS_ISS_PLP_PracticeModule_Group13](https://github.com/brooksky/NUS_ISS_PLP_PracticeModule_Group13) and unzip it.
 2. Go to *scripts* folder, run *create_venv.bat* to create a Python virtual environment at the root of the project and install required packages.
 3. Run *run_flask.bat* to launch the *backend app* to expose API for Chrome Extension app locally.
 4. In Chrome browser, open *Manage Extensions* and toggle *Developer mode*.
