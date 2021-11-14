@@ -295,8 +295,7 @@ def predict_comment_time(comment: str, video_id, transcript_df, video_duration) 
 
 
 def predict_comment_sentiment(comment: str) -> float:
-    return model_sentiment.get_text_sentiment(comment) if not IS_DUMMY_DATA \
-        else random.uniform(-1.0, 1.0)
+    return model_sentiment.get_text_sentiment(comment) if not IS_DUMMY_DATA else random.uniform(-1.0, 1.0)
 
 
 def get_hours_unit_from_seconds(seconds) -> int:

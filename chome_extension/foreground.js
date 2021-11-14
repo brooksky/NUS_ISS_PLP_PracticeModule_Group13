@@ -256,13 +256,8 @@ function createSentimentStackedBarChart(label_data, good_data, meh_data, bad_dat
 
 function getTextFromCommentTag(commentTag) {
     // ID="comment" -> ID="content-text" -> list of Span tags
-    var commentMsg = '';
     const contextTextTag = Array.from(commentTag.querySelectorAll("#content-text"))[0];
-    if (contextTextTag) {
-        const spanTags = Array.from(contextTextTag.getElementsByTagName('span'));
-        commentMsg = spanTags.map(spanTag => spanTag.textContent).join(' ');
-    }
-    return commentMsg;
+    return contextTextTag ? contextTextTag.textContent : '';
 }
 
 
