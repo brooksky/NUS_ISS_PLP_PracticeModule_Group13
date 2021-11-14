@@ -1,15 +1,5 @@
-import csv
-import nltk
-import pandas as pd
-import numpy as np
-import text2emotion as te
-
 from textblob import TextBlob
-from nrclex import NRCLex
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-
-from nltk.corpus import sentiwordnet as swn
-from nltk.tag import pos_tag
 
 
 sid = SentimentIntensityAnalyzer()

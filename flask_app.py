@@ -8,8 +8,8 @@ import datetime
 import pandas as pd
 import dask.dataframe as dd
 
-import model_sentiment
-import model_predict_video_segment
+from models import model_sentiment
+from models import model_predict_video_segment
 
 from flask import Flask, request
 from googleapiclient.discovery import build

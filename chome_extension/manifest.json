@@ -1,6 +1,6 @@
 {
     "name": "PLP Practice Module Group 13",
-    "description": "Build an Extension!",
+    "description": "Extension to add feature to YouTube videos",
     "version": "1.0",
     "manifest_version": 3,
     "options_page": "options.html",

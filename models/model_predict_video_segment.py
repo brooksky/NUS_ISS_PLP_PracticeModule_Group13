@@ -13,8 +13,8 @@ from gensim.models import Word2Vec
 
 
 NUM_BEST = 1
-COMMENTS_DATA_PATH = r'data/comments'
-TRANSCRIPT_DATA_PATH = r'data/transcript'
+COMMENTS_DATA_PATH = r'../data/comments'
+TRANSCRIPT_DATA_PATH = r'../data/transcript'
 
 download('punkt')
 download('stopwords')  # Download stopwords list.
