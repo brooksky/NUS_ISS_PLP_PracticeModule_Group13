@@ -6,6 +6,7 @@ button {
     border: none;
     border-radius: 2px;
     background-color: brown;
+    cursor:pointer;
 }
 
 button.current {
